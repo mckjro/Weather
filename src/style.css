@@ -1,19 +1,36 @@
-.weatherApp {
-  border: 1px solid black;
-  border-radius: 10px;
-  display: block;
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 550px;
-  min-width: 550px;
+body {
+  font-family: "Courier New", Courier, monospace;
 }
 
-.city {
+h1 {
   font-size: 30px;
 }
 
-.date {
+h2 {
   font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+form {
+  display: inline-block;
+  margin: auto;
+}
+
+.form {
+  display: block;
+  text-align: center;
+}
+.weather-app {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: block;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 550px;
+  min-width: 550px;
 }
 
 .temp {
