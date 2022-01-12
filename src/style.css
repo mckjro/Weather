@@ -1,0 +1,21 @@
+.weatherApp {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 550px;
+  min-width: 550px;
+}
+
+.city {
+  font-size: 30px;
+}
+
+.date {
+  font-size: 20px;
+}
+
+.temp {
+  font-size: 30px;
+}

@@ -14,20 +14,29 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="WeatherApp">
+    <div class="weatherApp">
       <div class="container">
-        <div class="Weather">
+        <div class="weather">
           <form>
             <div class="row">
-              <div class="col-9">
-                <input type="text" placeholder="Enter a city..." />
+              <div class="col-4">
+                <input
+                  type="text"
+                  class="btn btn-light"
+                  placeholder="Enter a city..."
+                />
               </div>
               <div class="col-3">
-                <input type="submit" />
+                <input class="btn btn-light" type="submit" />
+              </div>
+              <div class="col-5">
+                <button type="button" class="btn btn-light">
+                  Current Location
+                </button>
               </div>
             </div>
           </form>
-          <div class="WeatherInfo">
+          <div class="weather-info">
             <div class="row">
               <div class="col-6">
                 <div class="city">Thunder Bay</div>
@@ -45,7 +54,7 @@
               </div>
             </div>
           </div>
-          <div class="Forecast">
+          <div class="forecast">
             <div class="row">
               <div class="col-4">
                 <span class="forecast-day">Wed</span>
