@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/58a0994965.js" crossorigin="anonymous"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -20,19 +21,21 @@
         <div class="weather">
           <div class="form">
           <form>
-              <span>
+            <div class="row">
+              <div class="col-8">
                 <input
                   type="text"
-                  class="btn btn-light"
+                  class="btn btn-light search-bar"
                   placeholder="Enter a city..."
                 />
-              </span>
-              <span>
-                <input class="btn btn-light" type="submit" />
-              </span>
-                <button type="button" class="btn btn-dark">
-                  Current Location
-                </button>
+              </div>
+              <div class="col-2">
+                <input class="btn btn-dark" type="submit" value="Search" />
+              </div>
+              <div class="col-1" >
+                <button class="fas fa-compass"></button>
+              </div>
+              </div>
             </div>
           </form>
           </div>
