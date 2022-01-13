@@ -1,5 +1,5 @@
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -23,6 +23,11 @@ h3 {
   max-width: 550px;
   min-width: 550px;
 }
+
+.weather-info {
+  padding-top: 20px;
+}
+
 .fa-compass {
   font-size: 35px;
   border: none;
@@ -33,7 +38,7 @@ h3 {
 
 .search-bar {
   padding: 7px;
-  padding-right: 125px;
+  padding-right: 160px;
   border: none;
   border-radius: 5px;
   background: #f9fafb;
