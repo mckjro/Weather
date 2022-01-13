@@ -44,18 +44,31 @@
           <div class="weather-info">
             <div class="row">
               <div class="col-6">
-                <h1>Thunder Bay</h1>
-                <h2>Today's Date</h2>
-                <h3>Current Conditions</h3>
-                <h3>Precipitation</h3>
-                <h3>Humidity</h3>
-                <h3>Wind</h3>
+                <h1 id="city"></h1>
+                <h2 id="today-date">Today's Date</h2>
+                <h3>
+                  <div>
+                    Current Conditons: <span id="current-conditions"></span>
+                  </div>
+                  <div>
+                    Precipitation: <span id="precipitation"></span>
+                  </div>
+                  <div>
+                    Humidity: 
+                    <span id="humidity"></span>%
+                  </div>
+                  <div>
+                    Wind Speed: 
+                    <span id="wind"></span>
+                    km/h
+                  </div>
+                </h3>
               </div>
               <div class="col-6">
-                <span class="weather-symbol"> ☀️ </span>
-                <span class="temp">Temp</span>
-                <span class="celsius">°C</span>
-                <span class="farenheit">°F</span>
+                <span id="weather-icon"> ☀️ </span>
+                <span id="temperature">Temp</span>
+                <span id="celsius">°C</span>
+                <span id="farenheit">°F</span>
               </div>
             </div>
           </div>
