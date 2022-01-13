@@ -27,10 +27,18 @@ h3 {
   font-size: 35px;
   border: none;
   background-color: transparent;
+  padding-left: 20px;
+  color: #1d1f23;
 }
+
 .search-bar {
-  padding-right: 140px;
+  padding: 7px;
+  padding-right: 125px;
+  border: none;
+  border-radius: 5px;
+  background: #f9fafb;
 }
+
 .current-location {
   background: #1d1f23;
   color: white;
