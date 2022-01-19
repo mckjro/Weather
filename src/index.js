@@ -43,6 +43,8 @@ todayDate.innerHTML = `${currentDay} ${currentMonth} ${currentDate} ${currentHou
 
 //show current temperature
 function displayTemperature(response) {
+  let cityName = document.querySelector("#city");
+  cityName.innerHTML = response.data.name;
   let todayTemperature = document.querySelector("#temperature");
   todayTemperature.innerHTML = Math.round(response.data.main.temp);
   let windSpeed = document.querySelector("#wind");
@@ -53,29 +55,23 @@ function displayTemperature(response) {
   humidity.innerHTML = response.data.main.humidity;
 }
 
-let apiKey = "a0e67f987d2d40d852b573db0574da90";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
-
-//search city
+//submit city
 function searchCity(city) {
   let apiKey = "a0e67f987d2d40d852b573db0574da90";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
-//submit city
 function submitCity(event) {
   event.preventDefault();
-  let city = document.querySelector("#search-city").value;
-  let cityName = document.querySelector("#city");
-  cityName.innerHTML = city;
-  searchCity(city);
+  let cityInput = document.querySelector("#search-city");
+  searchCity(cityInput.value);
 }
+
+searchCity("New York");
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", submitCity);
-form.addEventListener("submit");
 
 //current location
 function currentLocation(position) {
