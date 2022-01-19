@@ -23,12 +23,13 @@
       <div class="container">
         <div class="weather">
           <div class="form">
-            <form>
+            <form id="city-form">
               <div class="row">
                 <div class="col-8">
                  <input
                   type="text"
                   class="search-bar"
+                  id="search-city"
                   placeholder="Enter a city..."
                 />
                 </div>
@@ -36,7 +37,7 @@
                   <input class="btn btn-dark" type="submit" value="Search" />
                 </div>
                 <div class="col-1" >
-                  <button class="fas fa-compass"></button>
+                  <button class="fas fa-compass" id="current-location"></button>
                 </div>
             </form>
           </div>
@@ -44,14 +45,11 @@
           <div class="weather-info">
             <div class="row">
               <div class="col-6">
-                <h1 id="city"></h1>
+                <h1 id="city">New York</h1>
                 <h2 id="today-date">Today's Date</h2>
                 <h3>
                   <div>
                     Current Conditons: <span id="current-conditions"></span>
-                  </div>
-                  <div>
-                    Precipitation: <span id="precipitation"></span>
                   </div>
                   <div>
                     Humidity: 
@@ -67,8 +65,7 @@
               <div class="col-6">
                 <span id="weather-icon"> ☀️ </span>
                 <span id="temperature">Temp</span>
-                <span id="celsius">°C</span>
-                <span id="farenheit">°F</span>
+                 <span class="units"><a href="#" id="celsius-link">°C </a>| <a href="#" id="farenheit-link">°F</a></span>
               </div>
             </div>
           </div>
