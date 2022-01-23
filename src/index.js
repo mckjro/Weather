@@ -91,6 +91,10 @@ function getForecast(coordinates) {
   axios.get(apiURL).then(displayForecast);
 }
 
+function changeBackground() {
+  document.getElementsByClassName("weather-app").style.background = "red";
+}
+
 //show current temperature
 function displayTemperature(response) {
   let cityName = document.querySelector("#city");
@@ -109,8 +113,8 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
-
   getForecast(response.data.coord);
+  changeBackground();
 }
 
 //submit city

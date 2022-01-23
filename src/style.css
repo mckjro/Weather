@@ -38,6 +38,7 @@ h3 {
   padding: 30px;
   max-width: 620px;
   min-width: 620px;
+  background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
 
 .weather-info {
