@@ -65,6 +65,23 @@ h3 {
   text-decoration: none;
 }
 
+.forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-day {
+  font-size: 20px;
+}
+
+.forecast-temperature {
+  font-size: 16px;
+}
+
+.forecast-temperature-min {
+  opacity: 0.6;
+}
+
 #temperature {
   font-size: 50px;
 }
