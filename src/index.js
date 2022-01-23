@@ -41,6 +41,34 @@ if (currentMinutes < 10) {
 let todayDate = document.querySelector("#today-date");
 todayDate.innerHTML = `${currentDay} ${currentMonth} ${currentDate} ${currentHours}:${currentMinutes}`;
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tues"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="forecast-day">${day}</div>
+      <div class="forecast-icon">
+        <img
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt=""
+          width="70"
+        />
+      </div>
+      <div class="forecast-temperature">
+        <span class="forecast-temperature-max">18°</span>
+        <span class="forecast-temperature-min">18°</span>
+      </div>
+    </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 //show current temperature
 function displayTemperature(response) {
   let cityName = document.querySelector("#city");
@@ -75,6 +103,7 @@ function submitCity(event) {
 }
 
 searchCity("New York");
+displayForecast();
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", submitCity);
