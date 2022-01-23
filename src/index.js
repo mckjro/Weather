@@ -91,10 +91,6 @@ function getForecast(coordinates) {
   axios.get(apiURL).then(displayForecast);
 }
 
-function changeBackground() {
-  document.getElementsByClassName("weather-app").style.background = "red";
-}
-
 //show current temperature
 function displayTemperature(response) {
   let cityName = document.querySelector("#city");
@@ -114,7 +110,6 @@ function displayTemperature(response) {
   );
   icon.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
-  changeBackground();
 }
 
 //submit city
