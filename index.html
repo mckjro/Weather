@@ -19,68 +19,70 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="weather-app">
-      <div class="container">
-        <div class="weather">
-          <div class="form">
-            <form id="city-form">
-              <div class="row">
-                <div class="col-8">
-                 <input
-                  type="search"
-                  class="form-control"
-                  id="search-city"
-                  placeholder="Enter a city..."
-                />
-                </div>
-                <div class="col-2">
-                  <input class="btn btn-dark" type="submit" value="Search" />
-                </div>
-                <div class="col-1" >
-                  <button class="fas fa-compass" id="current-location"></button>
-                </div>
-            </form>
-          </div>
-        </div>
-          <div class="weather-info">
-            <div class="row">
-              <div class="col-7">
-                <h1 id="city"></h1>
-                <h2 id="today-date">Today's Date</h2>
-                <h3>
-                  <div>
-                    Current Conditons: <span id="current-conditions"></span>
+      <div class="weather-app">
+        <div class="container">
+          <div class="weather">
+            <div class="form">
+              <form id="city-form">
+                <div class="row">
+                  <div class="col-8">
+                  <input
+                    type="search"
+                    class="form-control"
+                    id="search-city"
+                    placeholder="Enter a city..."
+                  />
                   </div>
-                  <div>
-                    Humidity: 
-                    <span id="humidity"></span>%
+                  <div class="col-2">
+                    <input class="btn btn-dark" type="submit" value="Search" />
                   </div>
-                  <div>
-                    Wind Speed: 
-                    <span id="wind"></span>
-                    km/h
+                  <div class="col-1" >
+                    <button class="fas fa-compass" id="current-location"></button>
                   </div>
-                </h3>
-              </div>
-              <div class="col-5">
-                <span id="weather-icon" >
-                  <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  alt="Clear"
-                  id="icon"/>
-                </span>
-                <span id="temperature" >Temp</span>
-                 <span class="units"><a href="#" id="celsius-link" class="link">°C </a>| <a href="#" id="farenheit-link" class="link">°F</a></span>
-              </div>
+              </form>
             </div>
           </div>
-          <div class="forecast" id="forecast">
+            <div class="weather-info">
+              <div class="row">
+                <div class="col-7">
+                  <h1 id="city"></h1>
+                  <h2 id="today-date">Today's Date</h2>
+                  <h3>
+                    <div>
+                      Current Conditons: <span id="current-conditions"></span>
+                    </div>
+                    <div>
+                      Humidity: 
+                      <span id="humidity"></span>%
+                    </div>
+                    <div>
+                      Wind Speed: 
+                      <span id="wind"></span>
+                      km/h
+                    </div>
+                  </h3>
+                </div>
+                <div class="col-5">
+                  <span id="weather-icon" >
+                    <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="Clear"
+                    id="icon"/>
+                  </span>
+                  <span id="temperature" >Temp</span>
+                  <span class="units">°C</span>
+                </div>
+              </div>
+            </div>
+            <div class="forecast" id="forecast">
+            </div>
           </div>
         </div>
-        <small>
-          <a href="https://github.com/mckjro/Weather">Github</a> McKenzie
-        </small>
       </div>
+    <div class="app-container">
+      <small>
+       <a href="https://github.com/mckjro/Weather">Github</a> McKenzie
+      </small>
     </div>
     <script src="src/index.js"></script>
   </body>

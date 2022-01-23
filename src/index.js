@@ -156,25 +156,3 @@ function findLocation(event) {
 
 let button = document.querySelector("#current-location");
 button.addEventListener("click", findLocation);
-
-function celsius(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#temperature");
-  let celsiusTemp = temperature.innerHTML;
-  celsiusTemp = Number(celsiusTemp);
-  temperature.innerHTML = Math.round(((celsiusTemp - 32) * 5) / 9);
-}
-
-let changeCelsius = document.querySelector("#celsius-link");
-changeCelsius.addEventListener("click", celsius);
-
-function farenheit(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#temperature");
-  let farenheitTemp = temperature.innerHTML;
-  farenheitTemp = Number(farenheitTemp);
-  temperature.innerHTML = Math.round((farenheitTemp * 9) / 5 + 32);
-}
-
-let changeFarenheit = document.querySelector("#farenheit-link");
-changeFarenheit.addEventListener("click", farenheit);
