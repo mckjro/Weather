@@ -31,7 +31,7 @@ h3 {
 }
 
 .weather-app {
-  border: 1px solid black;
+  border: none;
   border-radius: 10px;
   display: block;
   margin: 30px auto;
