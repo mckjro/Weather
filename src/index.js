@@ -41,7 +41,9 @@ if (currentMinutes < 10) {
 let todayDate = document.querySelector("#today-date");
 todayDate.innerHTML = `${currentDay} ${currentMonth} ${currentDate} ${currentHours}:${currentMinutes}`;
 
-function displayForecast() {
+//display forecast for rest of week
+function displayForecast(response) {
+  console.log(response.data);
   let forecast = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tues"];
@@ -69,6 +71,14 @@ function displayForecast() {
   forecast.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "a0e67f987d2d40d852b573db0574da90";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiURL);
+  axios.get(apiURL).then(displayForecast);
+}
+
 //show current temperature
 function displayTemperature(response) {
   let cityName = document.querySelector("#city");
@@ -87,6 +97,8 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 //submit city
@@ -103,7 +115,6 @@ function submitCity(event) {
 }
 
 searchCity("New York");
-displayForecast();
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", submitCity);
