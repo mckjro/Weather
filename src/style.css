@@ -41,7 +41,8 @@ h3 {
 }
 
 .weather-info {
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 15px;
 }
 
 .fa-compass {
@@ -73,7 +74,7 @@ h3 {
 .units {
   position: relative;
   font-size: 16px;
-  top: -40px;
+  top: -50px;
 }
 
 .link {
@@ -81,7 +82,7 @@ h3 {
 }
 
 .forecast {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -98,9 +99,11 @@ h3 {
 }
 
 #temperature {
-  font-size: 80px;
+  font-size: 90px;
 }
 
 #weather-icon {
   font-size: 80px;
+  position: relative;
+  top: -15px;
 }
