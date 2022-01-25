@@ -103,6 +103,8 @@ function displayTemperature(response) {
   currentConditions.innerHTML = response.data.weather[0].main;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
+  let feelsLike = document.querySelector("#feels-like");
+  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
   let icon = document.querySelector("#icon");
   icon.setAttribute(
     "src",
@@ -110,6 +112,7 @@ function displayTemperature(response) {
   );
   icon.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
+  console.log(response.data);
 }
 
 //submit city
@@ -140,12 +143,18 @@ function currentLocation(position) {
 }
 
 function currentTemperature(response) {
-  let currentTemp = Math.round(response.data.main.temp);
-  let currentCity = response.data.name;
-  let makeCurrentCity = document.querySelector("#city");
-  let makeCurrentTemp = document.querySelector("#temperature");
-  makeCurrentCity.innerHTML = `${currentCity}`;
-  makeCurrentTemp.innerHTML = `${currentTemp}`;
+  let cityName = document.querySelector("#city");
+  cityName.innerHTML = response.data.name;
+  let todayTemperature = document.querySelector("#temperature");
+  todayTemperature.innerHTML = Math.round(response.data.main.temp);
+  let windSpeed = document.querySelector("#wind");
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  let currentConditions = document.querySelector("#current-conditions");
+  currentConditions.innerHTML = response.data.weather[0].main;
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = response.data.main.humidity;
+  let feelsLike = document.querySelector("#feels-like");
+  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
 }
 
 function findLocation(event) {

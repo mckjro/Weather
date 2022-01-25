@@ -108,8 +108,12 @@ h3 {
   color: gray;
 }
 
-#temperature {
+.temperature {
   font-size: 85px;
+}
+
+.description {
+  font-weight: bold;
 }
 
 #weather-icon {
